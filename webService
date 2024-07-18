@@ -1,0 +1,16 @@
+package com.example.proyectomes1.presentation
+
+
+import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.POST
+
+interface webService {
+    @GET("consultaDiario.php")
+    suspend fun getList(): ArrayList<ReunionesModel>
+
+    @POST("loginUser.php")
+    suspend fun login(@Body loginRequest: LoginRequest): LoginResponse
+
+}
+
